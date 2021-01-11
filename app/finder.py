@@ -16,29 +16,35 @@ class Finder:
         if not ues:
             return False
         unknown_encoding = ues[0]
-        return fr.compare_faces([self.trump_encoding], unknown_encoding)
+        return fr.compare_faces([self.trump_encoding], unknown_encoding)[0]
 
 
     def frame_finder(self, image) -> bool:
         rgb_image = image[:, :, ::-1]
         ues = fr.face_encodings(rgb_image)
+        print(ues)
         if not ues:
             return False
         unknown_encoding = ues[0]
-        return fr.compare_faces([self.trump_encoding], unknown_encoding)
+        res = fr.compare_faces([self.trump_encoding], unknown_encoding)
+        return res[0]
 
 
 
 if __name__ == "__main__":
     import cv2
-    url = 'https://pbs.twimg.com/profile_images/1345429722444906497/sdAYml94_normal.jpg'
-    img = cv2.imread("./demo/trump.jpeg")
-    fi = Finder()
-    yuki = fi.image_finder("./demo/yuki.png")
-    trump = fi.image_finder("./demo/trump.jpeg")
-    trumpim = fi.frame_finder(img)
+    from main import Main
+    #url = 'https://pbs.twimg.com/profile_images/1345429722444906497/sdAYml94.jpg'
+    #url = 'https://pbs.twimg.com/profile_images/1092397546809556992/eoXhv9Gt.jpg'
+    #url = 'https://pbs.twimg.com/profile_images/1312039541654482946/oeJOY4L_.jpg'
+    url = 'https://pbs.twimg.com/profile_images/1157851233962491905/PG6j5Q6H.jpg'
+    img = Main.url2image(url)
 
-    print("yuki", yuki)
-    print("trump", trump)
-    print(trumpim)
+    #img = cv2.imread("./demo/trump.jpeg")
+    fi = Finder()
+    #yuki = fi.image_finder("./demo/yuki.png")
+    #trump = fi.image_finder("./demo/trump.jpeg")
+    for _ in range(30):
+        trumpim = fi.frame_finder(img)
+        print("img", trumpim)
     

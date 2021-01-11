@@ -28,7 +28,7 @@ class Main:
             if self.check_trump(image):
                 Logger.info("find Trump! ,name:" + user.screen_name)
                 # BLOCK
-                self.profiler.block(user.user_id)
+                #self.profiler.block(user.screen_name)
                 Logger.info("===BLOCKED===    :" + user.screen_name)
             else:
                 Logger.debug("not trump:( name:" + user.screen_name)
@@ -48,7 +48,8 @@ class Main:
         self.users_checker(users)
         Logger.info("followers check DONE!")
 
-    def url2image(self, url):
+    @staticmethod
+    def url2image(url):
         Logger.debug("ImageURL:" + url)
         resp = urllib.request.urlopen(url)
         image = np.asarray(bytearray(resp.read()), dtype="uint8")
@@ -60,6 +61,13 @@ class Main:
 
     def once(self):
         self.timeline_check()
+        self.followers_check()
+
+    def once_timeline(self):
+        self.timeline_check()
+
+    def once_followers(self):
+        self.followers_check()
 
     def run(self):
         schedule.every(timestr2sec(self.tl_iv)).seconds.do(self.timeline_check)

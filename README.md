@@ -1,9 +1,17 @@
-# trumpfinder
+# goodbye-trump-twitter
+
+"goodbye-trump-twitter" is a TwitterBOT that immediately blocks any user who has a Donald Trump icon on their timeline or among their followers.
+
 
 
 ## Requirements
 
 macOS or Linux (Windows not officially supported, but might work)
+
+### WindowsUsers.......(under verification)
+
+Install WSL while reading [this](Install_wsl.md) section, and then run the installation on WSL.
+
 
 
 ## Usage
@@ -65,6 +73,7 @@ $ pip3 install git+https://github.com/RiniaOkyama/goodbye-trump-twitter
 ```
 
 
-### WindowsUsers.......(under verification)
+# LICENSE
 
-Install WSL while reading [this](Install_wsl.md) section, and then run the installation on WSL.
+'goodbye-trump-twitter' is under the MIT license.
+
