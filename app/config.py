@@ -1,6 +1,8 @@
 import os
 import configparser
 
+from app.logger import Logger
+
 CONFIGFILE_PATH = os.environ["HOME"] + "/.gbtt.conf"
 
 class Config:
@@ -36,7 +38,8 @@ class Config:
             CA,CS,AT,AS = twk["CA"], twk["CS"], twk["AT"], twk["AS"]
             return CA,CS,AT,AS
         except KeyError:
-            raise
+            Logger.error("twitter api key not found. \n run $gbtrump reset")
+            exit(0)
 
     def get_check_interval_time(self) -> (str, str):
         """ return: timeline, follower """
@@ -44,11 +47,11 @@ class Config:
             ci = self.config["CheckInterval"]
             return ci["timeline"], ci["follower"]
         except KeyError:
-            raise
-        
-
+            Logger.error("CheckInterval not found. \n run $gbtrump reset")
+            exit(0)
 
 
 if __name__ == "__main__":
     conf = Config()
-    print(conf.get_twitter_api_key())
+    print('api     :', conf.get_twitter_api_key())
+    print('interval:', conf.get_check_interval_time())

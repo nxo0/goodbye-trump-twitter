@@ -1,24 +1,4 @@
-#from enum import IntEnum, auto
-
-#class TimeName(IntEnum):
-#    DAY = auto()
-#    HOUR = auto()
-#    MIN = auto()
-#    SEC = auto()
-#
-#day = TimeName.DAY
-#hour = TimeName.hour
-#time_names = {'d': day,
-#        'day': day,
-#        'days': day,
-#        }
-#
-#
-#def parser(time):
-#    tn = time_names.get(time)
-#    if tn is None:
-#        raise
-
+from app.logger import Logger
 
 def timestr2sec(time):
     te = time.endswith
@@ -30,3 +10,5 @@ def timestr2sec(time):
         return 60 * int(time[:-1])
     elif te("s"):
         return int(time[:-1])
+    else:
+        Logger.error("not match time." + time)
