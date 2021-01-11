@@ -58,5 +58,11 @@ cd ..
 python3 setup.py install
 ```
 
-At this point, you should be able to run `python3` and type `import dlib` successfully.
+Install goodbye-trump-twitter again, and if there is no error, you are done.
+
+```bash
+$ pip3 install git+https://github.com/RiniaOkyama/goodbye-trump-twitter
+```
+
+
 
