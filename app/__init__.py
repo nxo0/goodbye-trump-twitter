@@ -24,6 +24,14 @@ def reset():
 def once():
     Main().once()
 
+@cmd.command()
+def once_followers():
+    Main().once_followers()
+
+@cmd.command()
+def once_timeline():
+    Main().once_timeline()
+
 
 def main():
     cmd()
