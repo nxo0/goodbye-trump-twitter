@@ -17,20 +17,27 @@ WSLで動かすほうが手っ取り早いかもしれません。 [this](Instal
 
 ## 使い方
 
+
 ``bash
+
 $ gbtrump run
+
 ```
 
 実験で一度だけ実行したい場合:
 
 ```bash
+
 $ gbtrump once
+
 ```
 
 詳細はhelpを参照してください。
 
 ```bash
+
 $ gbtrump --help
+
 ```
 
 
@@ -52,6 +59,7 @@ $ vi ~/.gbtt.conf
 
 手動で入れる必要があるみたいです。
 
+<--
 要件:
 - Python3がインストールされていること。MacOSではhomebrewからインストールするか公式サイトからインストールしてください。Linuxでは、パッケージマネージャーを使用してインストールしてください。
   
@@ -62,20 +70,15 @@ $ vi ~/.gbtt.conf
 
 これらの手順は、nVidia GPUを持っておらず、CudaとcuDNNがインストールされておらず、GPUアクセラレーションを必要としないことを前提としています（現在のMacモデルはどれもこれをサポートしていないため）
 
+/-->
+
 
 ```bash
 git clone https://github.com/davisking/dlib.git
 ```
 
-Build the main dlib library (optional if you just want to use Python):
-
 ```bash
 cd dlib
-mkdir build; cd build; cmake ..; cmake --build .
-```
-
-```bash
-cd ..
 python3 setup.py install
 ```
 
