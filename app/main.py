@@ -24,12 +24,14 @@ class Main:
     def users_checker(self, users):
         Logger.info("users checking...")
         for user in tqdm(users):
-            image = self.url2image(user.profile_image_url_https)
+            image = self.url2image(user.profile_image_url_https.replace("_normal", ""))
             if self.check_trump(image):
                 Logger.info("find Trump! ,name:" + user.screen_name)
                 # BLOCK
                 self.profiler.block(user.user_id)
-                Logger.info("===BLOCKED===    :", + user.screen_name)
+                Logger.info("===BLOCKED===    :" + user.screen_name)
+            else:
+                Logger.debug("not trump:( name:" + user.screen_name)
         Logger.info("users check DONE!")
 
     def followers_check(self):
@@ -47,7 +49,8 @@ class Main:
         Logger.info("followers check DONE!")
 
     def url2image(self, url):
-        resp = urllib.urlopen(url)
+        Logger.debug("ImageURL:" + url)
+        resp = urllib.request.urlopen(url)
         image = np.asarray(bytearray(resp.read()), dtype="uint8")
         image = cv2.imdecode(image, cv2.IMREAD_COLOR)
         return image
