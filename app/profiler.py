@@ -19,7 +19,6 @@ class Profiler:
     def get_timeline_users(self):
         user_ids = []
         users = []
-        #for status in tqdm(tweepy.Cursor(self.api.home_timeline).items(30)):
         for status in tqdm(self.api.home_timeline(count=30)):
             if status.user.id not in user_ids:
                 user_ids.append(status.user.id)

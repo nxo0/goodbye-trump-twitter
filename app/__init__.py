@@ -8,27 +8,27 @@ from app.config import Config
 def cmd():
     pass
 
-@cmd.command()
+@cmd.command(help="run command")
 def run():
     print("running....")
     Main().run()
     print("stoped")
 
-@cmd.command()
+@cmd.command(help="config reset")
 def reset():
     config = Config()
     config.all_reset()
     click.echo("OK!")
 
-@cmd.command()
+@cmd.command(help="once check followers and timeline")
 def once():
     Main().once()
 
-@cmd.command()
+@cmd.command(help="once check followers")
 def once_followers():
     Main().once_followers()
 
-@cmd.command()
+@cmd.command(help="once check timeline")
 def once_timeline():
     Main().once_timeline()
 
