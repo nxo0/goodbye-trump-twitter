@@ -68,4 +68,6 @@ $ pip3 install git+https://github.com/RiniaOkyama/goodbye-trump-twitter
 ```
 
 
+# LICENSE
 
+'goodbye-trump-twitter' is under the MIT license.
