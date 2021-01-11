@@ -10,7 +10,7 @@ $ gbtrump run
 ## Install
 
 ```bash
-$ pip3 install -r https://github.com/RiniaOkyama/goodbye-trump-twitter.git
+$ pip3 install -r git+https://github.com/RiniaOkyama/goodbye-trump-twitter
 
 $ gbtrump reset
 
