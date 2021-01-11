@@ -28,7 +28,7 @@ class Main:
             if self.check_trump(image):
                 Logger.info("find Trump! ,name:" + user.screen_name)
                 # BLOCK
-                self.profiler.block(user.user_id)
+                self.profiler.block(user.screen_name)
                 Logger.info("===BLOCKED===    :" + user.screen_name)
             else:
                 Logger.debug("not trump:( name:" + user.screen_name)

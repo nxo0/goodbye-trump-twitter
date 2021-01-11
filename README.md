@@ -1,4 +1,7 @@
-# trumpfinder
+# goodbye-trump-twitter
+
+"goodbye-trump-twitter" is a TwitterBOT that immediately blocks any user who has a Donald Trump icon on their timeline or among their followers.
+
 
 
 ## Requirements
