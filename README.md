@@ -1,8 +1,18 @@
-# goodbye-trump-twitter
-トランプアイコンの人をブロックし、自分のTwitterからトランプを葬り去るプログラムです。【作成中】
+# trumpfinder
 
-どんどんプルリクしてください。
+## Usage
 
-NumPyとOpenCV使ってます。
+```bash
+$ gbtrump run
+```
 
-```pip install opencv-python```
+
+## Install
+
+```bash
+$ pip3 install -r https://github.com/RiniaOkyama/goodbye-trump-twitter.git
+
+$ gbtrump reset
+
+$ vi ~/.gbtt.conf
+```
