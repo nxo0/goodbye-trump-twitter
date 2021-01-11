@@ -8,6 +8,11 @@
 
 macOS or Linux (Windows not officially supported, but might work)
 
+### WindowsUsers.......(under verification)
+
+Install WSL while reading [this](Install_wsl.md) section, and then run the installation on WSL.
+
+
 
 ## Usage
 
@@ -71,3 +76,4 @@ $ pip3 install git+https://github.com/RiniaOkyama/goodbye-trump-twitter
 # LICENSE
 
 'goodbye-trump-twitter' is under the MIT license.
+
