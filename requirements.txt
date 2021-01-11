@@ -4,3 +4,5 @@ schedule
 opencv-python
 tweepy
 click
+tqdm
+coloredlogs==15.0
