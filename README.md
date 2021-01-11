@@ -18,7 +18,7 @@ Install WSL while reading [this](Install_wsl.md) section, and then run the insta
 
 ## Usage
 
-``bash
+```bash
 $ gbtrump run
 ```
 
@@ -52,7 +52,7 @@ $ vi ~/.gbtt.conf
 
 ### Do you get a dlib error?
 
-<--
+<!--
 Pre-reqs:
 - Python 3 must be installed; on MacOS, install from homebrew or from the official website; on Linux, install using a package manager.
   
@@ -64,7 +64,7 @@ Pre-reqs:
 - These instructions assume you don't have an nVidia GPU and don't have Cuda and cuDNN installed and don't want
   GPU acceleration (since none of the current Mac models support this).
 
-/-->
+-->
 
 Clone the code from github:
 
