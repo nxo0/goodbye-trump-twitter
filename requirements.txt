@@ -4,3 +4,4 @@ schedule
 opencv-python
 tweepy
 click
+tqdm

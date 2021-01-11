@@ -1,14 +1,19 @@
 import tweepy
+from tqdm import tqdm
 
 from app.config import Config
+from app.logger import Logger
 
 class Profiler:
     def __init__(self):
+        Logger.info("fetching CA,CS,AT,AS")
         config = Config()
         CA,CS,AT,AS = config.get_twitter_api_key()
+        Logger.info("fetched  CA,CS,AT,AS")
         auth = tweepy.OAuthHandler(CA, CS)
         auth.set_access_token(AT, AS)
         self.api = tweepy.API(auth)
+        Logger.info("auth OK.")
 
 
     def get_timeline_users(self):
@@ -28,7 +33,7 @@ class Profiler:
             friends_ids.append(friend_id)
 
         users = []
-        for i in range(0, len(friends_ids), 100):
+        for i in tqdm(range(0, len(friends_ids), 100)):
             for user in self.api.lookup_users(user_ids=friends_ids[i:i+100]):
                 users.append(user)
 
