@@ -65,4 +65,6 @@ $ pip3 install git+https://github.com/RiniaOkyama/goodbye-trump-twitter
 ```
 
 
+### WindowsUsers.......(under verification)
 
+Install WSL while reading [this](Install_wsl.md) section, and then run the installation on WSL.
