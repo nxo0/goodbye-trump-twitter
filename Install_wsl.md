@@ -29,3 +29,7 @@ If it has not been installed, please execute the following command.
 $ sudo apt install python3
 $ sudo apt install python3-pip
 ```
+
+## Third
+
+If you have Python installed, install and run GBTRUMP using the same procedure as Ubuntu, as described [here](README.md).
