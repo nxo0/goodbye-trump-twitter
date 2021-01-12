@@ -32,11 +32,11 @@ class Finder:
 if __name__ == "__main__":
     import cv2
     try:
-        from main import Main
+        from gbtrump import GBTrump
     except ImportError:
-        from gbtrump.main import Main
+        from gbtrump.gbtrump import GBTrump
     url = 'https://pbs.twimg.com/profile_images/1157851233962491905/PG6j5Q6H.jpg'
-    img = Main.url2image(url)
+    img = GBTrump.url2image(url)
     path = os.path.dirname(os.path.realpath(__file__))
 
     fi = Finder()

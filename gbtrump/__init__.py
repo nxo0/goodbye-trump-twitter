@@ -1,6 +1,6 @@
 import click
 
-from gbtrump.main import Main
+from gbtrump.gbtrump import GBTrump
 from gbtrump.config import Config
 
 
@@ -11,7 +11,7 @@ def cmd():
 @cmd.command(help="run command")
 def run():
     print("running....")
-    Main().run()
+    GBTrump().run()
     print("stoped")
 
 @cmd.command(help="config reset")
@@ -22,15 +22,15 @@ def reset():
 
 @cmd.command(help="once check followers and timeline")
 def once():
-    Main().once()
+    GBTrump().once()
 
 @cmd.command(help="once check followers")
 def once_followers():
-    Main().once_followers()
+    GBTrump().once_followers()
 
 @cmd.command(help="once check timeline")
 def once_timeline():
-    Main().once_timeline()
+    GBTrump().once_timeline()
 
 
 def main():

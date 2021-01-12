@@ -13,7 +13,7 @@ from gbtrump.time_parser import timestr2sec
 from gbtrump.logger import Logger
 
 
-class Main:
+class GBTrump:
     def __init__(self):
         config = Config()
         self.profiler = Profiler()
