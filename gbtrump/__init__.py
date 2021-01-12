@@ -3,10 +3,13 @@ import click
 from gbtrump.gbtrump import GBTrump
 from gbtrump.config import Config
 
+from gbtrump.__main__ import __version__
 
-@click.group()
-def cmd():
-    pass
+
+@click.group(invoke_without_command=True)
+@click.option('--version', is_flag=True, default=False)
+def cmd(version):
+    click.echo("GBTrump version: " + __version__)
 
 @cmd.command(help="run command")
 def run():
