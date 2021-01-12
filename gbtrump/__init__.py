@@ -1,17 +1,20 @@
 import click
 
-from app.main import Main
-from app.config import Config
+from gbtrump.gbtrump import GBTrump
+from gbtrump.config import Config
+
+from gbtrump.__main__ import __version__
 
 
-@click.group()
-def cmd():
-    pass
+@click.group(invoke_without_command=True)
+@click.option('--version', is_flag=True, default=False)
+def cmd(version):
+    click.echo("GBTrump version: " + __version__)
 
 @cmd.command(help="run command")
 def run():
     print("running....")
-    Main().run()
+    GBTrump().run()
     print("stoped")
 
 @cmd.command(help="config reset")
@@ -22,15 +25,15 @@ def reset():
 
 @cmd.command(help="once check followers and timeline")
 def once():
-    Main().once()
+    GBTrump().once()
 
 @cmd.command(help="once check followers")
 def once_followers():
-    Main().once_followers()
+    GBTrump().once_followers()
 
 @cmd.command(help="once check timeline")
 def once_timeline():
-    Main().once_timeline()
+    GBTrump().once_timeline()
 
 
 def main():

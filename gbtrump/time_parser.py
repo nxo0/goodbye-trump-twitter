@@ -1,4 +1,4 @@
-from app.logger import Logger
+from gbtrump.logger import Logger
 
 def timestr2sec(time):
     te = time.endswith

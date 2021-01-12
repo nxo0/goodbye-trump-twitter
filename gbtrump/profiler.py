@@ -1,8 +1,8 @@
 import tweepy
 from tqdm import tqdm
 
-from app.config import Config
-from app.logger import Logger
+from gbtrump.config import Config
+from gbtrump.logger import Logger
 
 class Profiler:
     def __init__(self):

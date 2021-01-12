@@ -1,7 +1,7 @@
 import os
 import configparser
 
-from app.logger import Logger
+from gbtrump.logger import Logger
 
 CONFIGFILE_PATH = os.environ["HOME"] + "/.gbtt.conf"
 
