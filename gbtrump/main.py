@@ -6,11 +6,11 @@ import schedule
 import cv2
 import numpy as np
 
-from app.finder import Finder
-from app.profiler import Profiler
-from app.config import Config
-from app.time_parser import timestr2sec
-from app.logger import Logger
+from gbtrump.finder import Finder
+from gbtrump.profiler import Profiler
+from gbtrump.config import Config
+from gbtrump.time_parser import timestr2sec
+from gbtrump.logger import Logger
 
 
 class Main:

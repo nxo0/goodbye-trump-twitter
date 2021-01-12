@@ -1,7 +1,7 @@
 import click
 
-from app.main import Main
-from app.config import Config
+from gbtrump.main import Main
+from gbtrump.config import Config
 
 
 @click.group()

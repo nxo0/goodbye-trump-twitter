@@ -34,7 +34,7 @@ if __name__ == "__main__":
     try:
         from main import Main
     except ImportError:
-        from app.main import Main
+        from gbtrump.main import Main
     url = 'https://pbs.twimg.com/profile_images/1157851233962491905/PG6j5Q6H.jpg'
     img = Main.url2image(url)
     path = os.path.dirname(os.path.realpath(__file__))

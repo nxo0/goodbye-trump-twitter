@@ -1,0 +1,6 @@
+dlib>=19.3.0
+face_recognition
+schedule
+opencv-python
+tweepy
+click
